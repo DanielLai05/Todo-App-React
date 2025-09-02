@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import React from 'react'
 import { Container, Navbar, Nav } from 'react-bootstrap'
 import Home from './pages/home'
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom"
+import { BrowserRouter, HashRouter, Outlet, Route, Routes } from "react-router-dom"
 import ErrorPage from "./pages/ErrorPage"
 import AddTodo from "./pages/AddTodo"
 import useLocalStorage from "use-local-storage"
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <TodoContext.Provider value={{ todos, setTodos }}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -37,7 +37,7 @@ function App() {
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TodoContext.Provider>
   )
 }
