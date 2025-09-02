@@ -1,5 +1,6 @@
 {
   "name": "todo-app",
+  "homepage": "https://github.com/DanielLai05/Todo-App-React",
   "private": true,
   "version": "0.0.0",
   "type": "module",
